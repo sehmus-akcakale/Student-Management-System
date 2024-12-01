@@ -1,0 +1,319 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+details {
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+summary {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+
+
+/* Input styles */
+.course-detail,
+.student-detail,
+.add-student-section-detail,
+.search-student-detail,
+.update-student-section-detail {
+    margin-bottom: 15px;
+}
+
+#update-student-information {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+button {
+    display: block;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+/* Student Course Detail in Seach Student*/
+.student-course-detail {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(100%-20px);
+    margin-top: 7px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*General details of Student in Search Student*/
+.student-general-details {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(100%-20px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+
+}
+
+.course-informations h3,
+.student-general-details h3 {
+    color: #2c3e50;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 5px;
+}
+
+.course-informations p,
+.student-general-details p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/*Midterm - Final - Grade Information*/
+.student-course-information {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #dcdcdc;
+    display: flex;
+    justify-content: space-between;
+}
+
+.student-course-information p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.student-course-information span {
+    font-weight: bold;
+}
+
+
+/*Search Course Details Section */
+#view-course-detail-section .course-detail {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(100%-20px);
+    margin-top: 5px;
+}
+
+#view-course-detail-section .course-detail h3 {
+    font-size: 18px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 5px;
+}
+
+#view-course-detail-section .course-detail p {
+
+    color: #555;
+    font-size: 14px;
+}
+
+
+/*Course Details Button Part*/
+.course-output-view {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+
+}
+
+.view-course-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.view-course-options button {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2c3e50;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.view-course-options button:hover {
+    background-color: #34495e;
+}
+
+/* Output information Part */
+.option-result-header {
+    font-size: 18px;
+    color: #2c3e50;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 5px;
+}
+
+/*For details about number of passed student and so on.*/
+.option-result-output {
+    background-color: #f9f9fb;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.option-result-output p {
+    font-size: 14px;
+    color: #555;
+}
+
+.option-result-output span {
+    font-weight: bold;
+}
+
+
+.delete-course-student {
+    margin-top: 5px;
+}
+
+#update-student-information>select {
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+thead th {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+td,
+th {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.option-result-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.option-result-output p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.option-result-output span {
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 768px) {
+    table {
+        width: calc(100% - 20px);
+    }
+
+    tr,
+    td {
+        font-size: 10px
+    }
+
+    .view-course-details {
+        flex-direction: column;
+    }
+
+    .view-course-options {
+        flex-direction: column;
+    }
+
+    .view-course-options button {
+        margin-bottom: 10px;
+    }
+}

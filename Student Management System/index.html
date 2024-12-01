@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akçakale Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Welcome to Akçakale Student Management System</h1>
+    <!-- Course CRUD Operations -->
+    <details id="course-crud-section">
+        <summary>Add/Update/Delete Course Section</summary>
+        <details>
+            <!-- Add Course Section -->
+            <summary>Add Course Section</summary>
+            <div class="course-detail">
+                <label for="course-code">Course Code</label>
+                <input type="text" name="course-code" id="course-code" required>
+            </div>
+            <div class="course-detail">
+                <label for="course-name">Course Name</label>
+                <input type="text" name="course-name" id="course-name" required>
+            </div>
+            <div class="course-detail">
+                <label for="course-instructor">Course Instructor</label>
+                <input type="text" name="course-instructor" id="course-instructor" required>
+            </div>
+            <div class="course-detail">
+                <label for="course-description">Course Description</label>
+                <input type="text" name="course-description" id="course-description">
+                <!-- <textarea type="text" name="course-description" id="course-description"> -->
+            </div>
+            <div class="course-detail">
+                <label for="course-credit">Course Credit</label>
+                <input type="number" min="1" max="10" name="course-credit" id="course-credit" required>
+            </div>
+            <div class="course-detail">
+                <label for="course-capacity">Course Capacity</label>
+                <input type="number" min="10" max="100" name="course-capacity" id="course-capacity" required>
+            </div>
+            <div class="course-detail">
+                <label for="course-grading-scale">Course Grading Scale:</label>
+                <select name="course-grading-scale" id="course-grading-scale">
+                    <option value="7">7</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <button id="add-course">Add Course</button>
+        </details>
+        <details>
+            <!-- Update Course Section -->
+            <summary>Update Course Section</summary>
+            <div class="course-detail">
+                <label for="update-course-select">Select Course</label>
+                <select name="update-course-select" id="update-course-select" required>
+                    <!-- Options will be populated dynamically -->
+                </select>
+            </div>
+            <div class="course-detail">
+                <label for="update-course-name">Course Name</label>
+                <input type="text" name="update-course-name" id="update-course-name" required>
+            </div>
+            <div class="course-detail">
+                <label for="update-course-instructor">Course Instructor</label>
+                <input type="text" name="update-course-instructor" id="update-course-instructor" required>
+            </div>
+            <div class="course-detail">
+                <label for="update-course-description">Course Description</label>
+                <input type="text" name="update-course-description" id="update-course-description">
+            </div>
+            <div class="course-detail">
+                <label for="update-course-credit">Course Credit</label>
+                <input type="number" min="1" max="10" name="update-course-credit" id="update-course-credit" required>
+            </div>
+            <div class="course-detail">
+                <label for="update-course-capacity">Course Capacity</label>
+                <input type="number" min="10" max="100" name="update-course-capacity" id="update-course-capacity"
+                    required>
+            </div>
+            <h5 style="color:red;text-align: center;">Leave fields empty if no changes are needed</h5>
+            <button id="update-course">Update Course</button>
+        </details>
+        <!-- Delete Course Section -->
+        <details>
+            <summary>Delete Course Section</summary>
+            <div class="course-detail">
+                <label for="delete-course-select">Select Course</label>
+                <select name="delete-course-select" id="delete-course-select" required>
+                    <!-- Options will be populated dynamically -->
+                </select>
+            </div>
+            <button id="delete-course">Delete Course</button>
+        </details>
+
+    </details>
+    <!-- Studwnt CRUD Section -->
+    <details id="student-crud-section">
+        <summary>Add/Update/Delete Student Section</summary>
+        <details>
+            <!-- Add Student Section -->
+            <summary>Add Student Section</summary>
+            <div class="student-detail">
+                <label for="student-id">Student ID</label>
+                <input type="number" name="student-id" id="student-id" required>
+            </div>
+            <div class="student-detail">
+                <label for="student-name">Student Name</label>
+                <input type="text" name="student-name" id="student-name" required>
+            </div>
+            <div class="student-detail">
+                <label for="student-surname">Student Surname</label>
+                <input type="text" name="student-surname" id="student-surname" required>
+            </div>
+            <div class="student-detail">
+                <label for="student-email">Student Email</label>
+                <input type="email" name="student-email" id="student-email" required>
+            </div>
+
+            </div>
+            <button id="add-student">Add Student</button>
+        </details>
+        <details>
+            <!-- Update Student Section -->
+            <summary>Update Student Section</summary>
+            <div class="student-detail">
+                <label for="update-student-select">Select Student</label>
+                <select name="update-student-select" id="update-student-select" required>
+                    <!-- Options will be populated dynamically -->
+                </select>
+            </div>
+            <div class="student-detail">
+                <label for="update-student-name">Student Name</label>
+                <input type="text" name="update-student-name" id="update-student-name" required>
+            </div>
+            <div class="student-detail">
+                <label for="update-student-surname">Student Surname</label>
+                <input type="text" name="update-student-surname" id="update-student-surname" required>
+            </div>
+            <div class="student-detail">
+                <label for="update-student-email">Student Email</label>
+                <input type="email" name="update-student-email" id="update-student-email" required>
+            </div>
+            <h5 style="color:red;text-align: center;">Leave fields empty if no changes are needed</h5>
+            <button id="update-student">Update Student</button>
+        </details>
+        <details>
+            <!-- Delete Student Section -->
+            <summary>Delete Student Section</summary>
+            <div class="student-detail">
+                <label for="delete-student-select">Select Student to Delete</label>
+                <select name="delete-student-select" id="delete-student-select" required>
+                    <!-- Options will be populated dynamically -->
+                </select>
+            </div>
+            <button id="delete-student">Delete Student</button>
+        </details>
+    </details>
+
+    <!-- Register Student to A Course Section -->
+    <details id="add-student-section">
+        <summary>Register Student to A Course Section</summary>
+        <div class="add-student-section-detail">
+            <label for="course-code-section">Course Code</label>
+            <select name="course-code-section" id="course-code-section">
+                <!-- These are examples so I will automatically add them  -->
+                <!-- <option value="MATH101">MATH101 - Calculus 1</option>
+                <option value="MATH102">MATH102 - Calculus 2</option> -->
+            </select>
+        </div>
+
+        <div class="add-student-section-detail">
+            <label for="stduent-id-section">Student Information</label>
+            <select name="student-id-section" id="student-id-section">
+                <!-- These are examples so I will automatically add them  -->
+                <!-- <option value="210709063">210709063 - Şehmus Umut Akçakale</option>
+                <option value="210709070">210709070 - Muhammet Ata Kaş</option> -->
+            </select>
+        </div>
+
+        <div class="add-student-section-detail">
+            <label for="add-student-midterm">Midterm Result</label>
+            <input type="number" min="0" max="100" name="add-student-midterm" id="add-student-midterm" required>
+        </div>
+
+        <div class="add-student-section-detail">
+            <label for="add-student-final">Final Result</label>
+            <input type="number" min="0" max="100" name="add-student-final" id="add-student-final" required>
+        </div>
+
+        <button id="add-student-to-course">Register</button>
+    </details>
+    <!-- Search Student Section -->
+    <details id="search-student-section">
+        <summary>Search Student</summary>
+        <div class="search-student-detail">
+            <label for="search-student-id-section">Students</label>
+            <select name="search-student-id-section" id="search-student-id-section">
+                <!-- These are examples so I will automatically add them  -->
+                <!-- <option value="210709063">210709063 - Şehmus Umut Akçakale</option>
+                <option value="210709070">210709070 - Muhammet Ata Kaş</option> -->
+            </select>
+        </div>
+        <button id="search-student">Search</button>
+        <div id="student-details">
+            <!-- Student Detail With His Courses Details  -->
+            <!-- <div class="student-general-details">
+                <h3>General Informations</h3>
+                <p>Student ID: 210709063</p>
+                <p>Student Name: Şehmus Umut Akçakale</p>
+                <p>Student Email : sehmus_umut@hotmail.com</p>
+                <p>Student GPA : 4.0</p>
+            </div>
+            <div class="student-course-detail">
+                <div class="course-informations">
+                    <h3>Course Informations</h3>
+                    <p>Course Code: MATH101</p>
+                    <p>Course Name: Calculus 1</p>
+                    <p>Course Instructor: Dr. Ahmet Ak</p>
+                    <p>Course Credit: 5</p>
+                </div>
+                <div class="student-course-information">
+                    <p>Midterm: 80</p>
+                    <p>Final: 90</p>
+                    <p>Final Grade: <span style="color: blue;">AA</span></p>
+                </div>
+            </div>
+            <div class="student-course-detail">
+                <div class="course-informations">
+                    <h3>Course Informations</h3>
+                    <p>Course Code: MATH101</p>
+                    <p>Course Name: Calculus 1</p>
+                    <p>Course Instructor: Dr. Ahmet Ak</p>
+                    <p>Course Credit: 5</p>
+                </div>
+
+                <div class="student-course-information">
+                    <p>Midterm: 50</p>
+                    <p>Final: 30</p>
+                    <p>Final Grade: <span style="color: red;">FF</span></p>
+                </div>
+
+            </div> -->
+        </div>
+    </details>
+
+    <details id="view-course-detail-section">
+        <summary>Search Course Details</summary>
+
+        <div class="add-student-section-detail">
+            <label for="search-course-code-section">Course Code</label>
+            <select name="search-course-code-section" id="search-course-code-section">
+                <!-- These are examples so I will automatically add them  -->
+                <!-- <option value="MATH101">MATH101 - Calculus 1</option>
+                <option value="MATH102">MATH102 - Calculus 2</option> -->
+            </select>
+        </div>
+        <button id="view-course-details">View</button>
+
+        <div class="view-course-details">
+            <!-- Course Details With Registered Students -->
+            <!-- <div class="course-detail">
+                <h3>Course Informations</h3>
+                <p>Course Code: MATH101</p>
+                <p>Course Name: Calculus 1</p>
+                <p>Course Instructor: Dr. Ahmet Ak</p>
+                <p>Course Credit: 5</p>
+                <p>Course Capacity: 50</p>
+                <p>Course Grading Scale: 7</p>
+            </div>
+            <details>
+                <summary>Update Student Information</summary>
+                <div id="update-student-information">
+                    <label for="update-information">Students</label>
+                    <select name="update-information" id="update-information">
+                   
+                        <option value="210709063">210709063 - Şehmus Umut Akçakale</option>
+                        <option value="210709070">210709070 - Muhammet Ata Kaş</option>
+                    </select>
+                    <div class="update-student-section-detail">
+                        <label for="update-student-midterm">Midterm Result</label>
+                        <input type="number" min="0" max="100" name="update-student-midterm" id="update-student-midterm"
+                            required>
+                    </div>
+                    <div class="update-student-section-detail">
+                        <label for="update-student-final">Final Result</label>
+                        <input type="number" min="0" max="100" name="update-student-final" id="update-student-final"
+                            required>
+                    </div>
+
+                    <button class="delete-course-student">Delete Student</button>
+                    <button class="update-course-student">Update Student</button>
+                </div>
+            </details>
+
+            <div class="course-output-view">
+                <div class="view-course-options">
+                    <button class="get-all-student">All Student</button>
+                    <button class="get-passed-student">Passed Student</button>
+                    <button class="get-failed-student">Failed Student</button>
+                    <button class="get-course-detail">Course Detail</button>
+                    <button class="change-course-grading-scale">Change Grading Scale</button>
+                </div>
+                <div class="course-option-result">
+                    <h3 class="option-result-header">Informations</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Student ID</th>
+                                <th>Student Name</th>
+                                <th>Midterm</th>
+                                <th>Final</th>
+                                <th>Final Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>210709063</td>
+                                <td>Şehmus Umut Akçakale</td>
+                                <td>80</td>
+                                <td>90</td>
+                                <td style="color: blue;">AA</td>
+                            </tr>
+                            <tr>
+                                <td>210709063</td>
+                                <td>Şehmus Umut Akçakale</td>
+                                <td>80</td>
+                                <td>90</td>
+                                <td style="color: blue;">AA</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="course-detail-ouput">
+                        <p>Number of Passed Students: <span style="color: green;">25</span></p>
+                        <p>Number of Failed Students: <span style="color: red;">5</span></p>
+                        <p>Mean Score of the Entire Class: <span style="color: blue;">75</span></p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </details>
+
+    <script type="module" src="course-student-crud.js"></script>
+    <script type="module" src="add-options-section.js"></script>
+    <script type="module" src="register-student.js"></script>
+    <script type="module" src="search-student.js"></script>
+    <script type="module" src="course-details.js"></script>
+</body>
+
+</html>
